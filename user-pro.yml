@@ -1,0 +1,35 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /user
+spring:
+  application:
+    name: user
+  datasource:
+    url: jdbc:mysql://mysql:3306/sillyordering_user?&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456789
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  session:
+    store-type: redis
+
+  redis:
+    port: 6379
+    host: redis
+    password: 123456789
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:7777/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 6
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+bean:
+  conf:
+    snowflake:
+      mid: 10
