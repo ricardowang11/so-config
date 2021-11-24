@@ -15,6 +15,12 @@ spring:
     port: 6379
     host: redis
     password: 123456789
+  sleuth:
+    sampler:
+      probability: 1.0
+      rate: 30
+  zipkin:
+    base-url: http://localhost:13001
 eureka:
   client:
     register-with-eureka: true
