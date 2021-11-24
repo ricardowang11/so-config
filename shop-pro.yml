@@ -3,8 +3,6 @@ server:
   servlet:
     context-path: /shop
 spring:
-  application:
-    name: shop
   datasource:
     url: jdbc:mysql://mysql:3306/sillyordering_shop?&useSSL=true&serverTimezone=GMT%2B8
     username: root
